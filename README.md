@@ -1,17 +1,14 @@
 
 
 # Discord bot template
-## tl;dr
-This is a code template that will help you build a Discord bot in a quick and elegant way. You just have to tweak a few settings to your liking, add your commands, and you'll be ready to go.
+This is a fork of [discord-bot-template](https://github.com/agubelu/discord-bot-template) which has been migrated to [nextcord](https://github.com/nextcord/nextcord) instead of discord.py . Also included some minor improvement.
 
-Adding new commands or temporal events is as simple as inheriting from an abstract class, which helps to keeping everything clean and simple.
-
-Check [example_command.py](https://github.com/agubelu/discord-bot-template/blob/master/commands/example_command.py) and [example_event.py](https://github.com/agubelu/discord-bot-template/blob/master/events/example_event.py) for an example on how to implement commands and events, or keep reading for more detailed info.
+Check [example_command.py](https://github.com/gxjakkap/discord-bot-template/blob/master/commands/example_command.py) and [example_event.py](https://github.com/gxjakkap/discord-bot-template/blob/master/events/example_event.py) for an example on how to implement commands and events, or keep reading for more detailed info.
 
 ## Pre-requisites
-- Python >= 3.6 (though you can use 3.5 if you remove the [f-strings](https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pep498))
+- Python >= 3.8 (required by [nextcord](https://github.com/nextcord/nextcord#:~:text=Python%203.8%20or%20higher%20is%20required))
 - You need to [register your bot and get a Discord API token](https://discordapp.com/developers/applications/me).
-- You should be at least familiar with Python 3 and with the basics of the [discord.py](https://github.com/Rapptz/discord.py) [(docs)](https://discordpy.readthedocs.io/en/latest/) library.
+- You should be at least familiar with Python 3 and with the basics of the [nextcord](https://github.com/nextcord/nextcord) [(docs)](https://nextcord.readthedocs.io/en/latest/) library.
 - You should also have some basic knowledge about what asynchronous programming is and [how it works in Python](https://snarky.ca/how-the-heck-does-async-await-work-in-python-3-5/), but to be fairly honest you don't really have to in order to make this thing work. You can just throw in `async` or `await` whenever Python complains.
 - You should know what a `virtualenv` is and how to set up one. Check [this](http://docs.python-guide.org/en/latest/dev/virtualenvs/#lower-level-virtualenv) out if the file name `requirements.txt` doesn't speak to you.
 
@@ -24,7 +21,7 @@ You can edit the following parameters in the `settings.py` file:
 - **BASE_DIR**: This isn't really a setting, but you can use to build relative paths inside your code. It points to the directory where the settings file itself is stored.
 
 # Running your bot
-Just run `python your_bot.py` and everything should work just fine if all dependencies are met. Of course, you can rename `your_bot.py` to anything you want.
+Just run `python bot.py` and everything should work just fine if all dependencies are met. Of course, you can rename `bot.py` to anything you want.
 
 # Adding commands
 Having all of your commands in a single file (or maybe even a single *switch*) gets ugly quickly as you start adding commands. We all know it makes for messy, often redundant code.
@@ -181,7 +178,7 @@ Parameters:
 - **rel_path**: The relative path.
 
 Example:
-- If your bot is located in `/home/agu/mybot`, calling `get_rel_path("storage")` will return `/home/agu/mybot/storage`.
+- If your bot is located in `/home/gg/mybot`, calling `get_rel_path("storage")` will return `/home/gg/mybot/storage`.
 
 ## `get_emoji`
 Sadly, discord.py doesn't allow you to send emojis by writing their aliases in the message. Instead, you have to send the actual emoji character in the message, which isn't very convenient.
@@ -245,9 +242,9 @@ Parameters:
 - **retries**: Number of times to retry sending the file if an error is encountered before giving up and sending an error message. Defaults to `3`.
 
 Examples:
-- `await try_upload_file(client, channel, "/home/agu/file.jpg", "My picture")` will send `file.jpg` to channel `channel` with the additional text `My picture`, and without deleting it afterwards,.
+- `await try_upload_file(client, channel, "/home/gg/file.jpg", "My picture")` will send `file.jpg` to channel `channel` with the additional text `My picture`, and without deleting it afterwards,.
 
-- `await try_upload_file(client, channel, "/home/agu/file.jpg", delete_after_send=True)` will send `file.jpg` to channel `channel` without any caption and deleting the file afterwards.
+- `await try_upload_file(client, channel, "/home/gg/file.jpg", delete_after_send=True)` will send `file.jpg` to channel `channel` without any caption and deleting the file afterwards.
 
 # License
-GPL-3.0
+[GPL-3.0](https://github.com/gxjakkap/discord-bot-template/blob/master/LICENSE)

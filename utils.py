@@ -1,9 +1,10 @@
 from os.path    import join
 from os         import remove
 
-from discord    import HTTPException
+from nextcord   import HTTPException
 from emoji      import emojize
 
+import json
 import settings
 
 
@@ -69,3 +70,9 @@ async def try_upload_file(client, channel, file_path, content=None,
                                  "Oops, something happened. Please try again.")
 
     return sent_msg
+
+
+def getprefix(gid):
+    with open ('prefix.json', 'r') as f:
+        prefix = json.load(f)
+    return prefix[str(gid)]

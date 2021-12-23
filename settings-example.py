@@ -2,10 +2,10 @@ import os
 
 # The prefix that will be used to parse commands.
 # It doesn't have to be a single character!
-COMMAND_PREFIX = "&&"
+COMMAND_PREFIX = "!"
 
 # The bot token. Keep this secret!
-BOT_TOKEN = "ODk0ODM2MDE0MTM1MjU5MTM4.YVvy-w.u3IRCecxtR-XQRPYIltd46MjYGQ"
+BOT_TOKEN = "Get this from https://discord.com/developers/applications"
 
 # Message to display when joining server
 WELCOME = "Hello! My prefix is"

@@ -2,7 +2,7 @@ aiohttp
 APScheduler
 async-timeout
 chardet
-discord.py
+nextcord
 emoji
 multidict
 pytz

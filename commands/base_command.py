@@ -8,7 +8,7 @@ class BaseCommand:
         self.name = type(self).__name__.lower()
         self.params = params
 
-        desc = f"**{settings.COMMAND_PREFIX}{self.name}**"
+        desc = f"**{self.name}**"
 
         if self.params:
             desc += " " + " ".join(f"*<{p}>*" for p in params)
