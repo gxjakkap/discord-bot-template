@@ -15,14 +15,17 @@ Check [example_command.py](https://github.com/gxjakkap/discord-bot-template/blob
 ## Installation
 
 1. Set up virtualenv
+
   Check out how to [here](https://docs.python.org/3/library/venv.html).
 
 2. Install All required dependencies
+
   `pip3 install -r requirements.txt`
 
 3. Fill out settings-example.py and rename it to settings.py
 
 4. Run bot.py
+
   Linux: `python3 bot.py`
   Windows: `python -3 bot.py`
 
